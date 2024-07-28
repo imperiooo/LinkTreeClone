@@ -3,8 +3,9 @@ import Link from "next/link";
 export default function Header()
 {
     return(
-        <header className="bg-white border-b flex justify-between p-4">
-        <div className="flex gap-6">
+        <header className="bg-white border-b py-4">
+        <div className="max-w-4xl flex justify-between mx-auto px-6">
+        <div className="flex gap-6 ">
         <Link className="text-black" href={'/'}>LinkList</Link>
         <nav className="flex gap-4 items-center text-slate-500 text-sm">
           <Link href={'/about'}>About</Link>
@@ -16,6 +17,7 @@ export default function Header()
           <Link href={'/login'}>Sign In</Link>
           <Link href={'/register'}>Create Account</Link>
         </nav>
+        </div>
       </header>
     );
 }
