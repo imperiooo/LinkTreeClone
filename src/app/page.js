@@ -1,12 +1,11 @@
 // import Image from "next/image";
 // import Link from "next/link";
-import Header from "./components/header";
+// import Header from "../components/header";
 
 export default function Home() {
   return (
     <main>
-      <Header></Header>
-      <section className="p-6 pt-32 max-w-4xl mx-auto">
+      <section className="pt-10">
         <div className="max-w-md mb-8">
         <h1 className="text-6xl font-bold">Your one Link <br></br> for Everything</h1>
         <h2 className="text-gray-500 text-xl mt-6">Share your links, social profiles, contact info <br></br> and more on one page</h2>
