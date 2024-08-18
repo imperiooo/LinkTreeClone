@@ -8,11 +8,11 @@ export default function HeroForm()
 {
     // const [username,setUsername] = useState('')
     useEffect(() => {
-        if('localStorage' in window && window.localStorage.getItem('wantedUsername'))
+        if('localStorage' in window && window.localStorage.getItem('desiredUsername'))
         {
-            const username = window.localStorage.getItem('wantedUsername');
-            window.localStorage.removeItem('wantedUsername');
-            redirect('/account?username='+username)
+            const username = window.localStorage.getItem('desiredUsername');
+            window.localStorage.removeItem('desiredUsername');
+            redirect('/account?desiredUsername='+username)
         }
     }, []);
     async function handleSubmit(ev)
@@ -25,7 +25,7 @@ export default function HeroForm()
         const username = input.value
         if(username.length > 0)
         {
-            window.localStorage.setItem('wantedUsername', username);
+            window.localStorage.setItem('desiredUsername', username);
             await signIn('google')
         }
     }
